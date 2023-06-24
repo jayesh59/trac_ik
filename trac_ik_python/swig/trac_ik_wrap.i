@@ -58,6 +58,7 @@ namespace std {
     TRAC_IK(const std::string& base_link, const std::string& tip_link, const std::string& urdf_string,
       double timeout, double epsilon, const std::string& solve_type="Speed"){
 
+      ros::Time::init();
       urdf::Model robot_model;
 
       robot_model.initString(urdf_string);
